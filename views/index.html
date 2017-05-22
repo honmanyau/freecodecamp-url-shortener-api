@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Free Code Camp Project—URL Shortener Microservice</title>
+    <meta name="Honman Yau" content="This page was created in fulfilment of the URL Shortener Microservice project of the Free Code Camp Curriculum.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 class="text-center">
+          URL Shortener
+        </h1>
+      </header>
+      
+      <section class="text-center">
+        <p>
+          This is a simple URL shortening microservice that takes a valid URL and returns a (hopefully!) shorter URL that redirects to the original URL supplied.  The URL shortener is also available as an API (example below).  The API only accepts URLs with either the HTTP or HTTPS protocol identifiers; he server attempts to resolve a URL using the HTTPS protocol if it is not specified.
+        </p>
+        <p>
+          It is worth noting that the parameter returned in a URL shortened by this microservice is base-36 encoded to make them shorter; base-36 encoding was chosen as it is the largest radix supported by the <code>toString()</code> and <code>parseInt()</code> methods in vanilla Javascript.
+        </p>
+        <h3>
+          Example API Call:
+        </h3>
+        <code>https://kurz.glitch.me/api?url=https://lithe.co</code>
+        <h3>
+          Example Output:
+        </h3>
+        <code>{"target":"https://lithe.co","shortened":"https://kurz.glitch.me/0"}</code>
+      </section>
+      
+      <section class="text-center">
+        <h3>
+          Try it out Here!
+        </h3>
+        <form id="shortener-form">
+          <input type="text" placeholder="Example: http://www.lithe.co" class="text-center" id="input-text" />
+          <div class="text-center" id="output-text">&nbsp;</div>
+          <button type="submit" id="btn-submit">Shorten!</button>
+        </form>
+      </section>
+      
+      <footer class="row">
+        <p>
+          <a href="#"><i class="fa fa-twitter"></i></a>&nbsp;
+          <a href="#"><i class="fa fa-facebook-official"></i></a>&nbsp;
+          <a href="#"><i class="fa fa-google-plus-official"></i></a>&nbsp;
+          <a href="#"><i class="fa fa-linkedin"></i></a>&nbsp;
+          <a href="#"><i class="fa fa-github"></i></a>&nbsp;
+          <a href="#"><i class="fa fa-codepen"></i></a>&nbsp;
+          <a href="#"><i class="fa fa-envelope-o"></i></a>
+        </p>
+        <p>This page was created in fulfilment of the URL Shortener Microservice project of the Free Code Camp Curriculum</p>
+      </footer>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
+

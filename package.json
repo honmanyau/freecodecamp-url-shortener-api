@@ -1,11 +1,7 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-
-  "name": "my-glitch-app",
+  "name": "freecodecamp-url-shortener-api",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "This microservice/API was created in fulfilment of the URL Shortener Microservice project of the Free Code Camp Curriculum.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -20,12 +16,13 @@
     "node": "6.10.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://github.com/honmanyau/freecodecamp-url-shortener-api"
   },
   "license": "MIT",
   "keywords": [
     "node",
     "glitch",
-    "express"
+    "express",
+    "freecodecamp"
   ]
 }

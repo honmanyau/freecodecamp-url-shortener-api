@@ -19,8 +19,6 @@ form.addEventListener("submit", (event) => {
   xhr.onload = (event) => {
     const data = JSON.parse(event.target.response);
     
-    console.log(data);
-    
     if (data.shortened) {
       output.innerHTML = "<a href=\"" + data.shortened + "\">" + data.shortened + "</a>"; 
     }
